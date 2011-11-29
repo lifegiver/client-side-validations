@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <input type="text" id="name" data-validate="validate(required)" />
   </div>
   <div class="field">
     <%= f.label :description %><br />
@@ -29,8 +29,5 @@
 <% end %>
 
 <script type="text/javascript">
-  $(function() {
-    var v = $("#new_product").jcheck();
-    v.validates("name", {presence: true});
-  });
+  $('#new_product').ketchup();
 </script>
